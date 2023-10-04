@@ -5,7 +5,7 @@ import axios from "axios";
 
 const MainPage = () => {
   const [allPokemons, setAllPokemons] = useState(null);
-  const getPokemonFromApi = async () => {
+  const getPokemonsFromApi = async () => {
     try {
       const responseFromTheApi = await axios.get(
         "https://pokeapi.co/api/v2/pokemon/?limit=151"
@@ -16,7 +16,7 @@ const MainPage = () => {
     }
   };
   useEffect(() => {
-    getPokemonFromApi();
+    getPokemonsFromApi();
   }, []);
   return (
     <div>
