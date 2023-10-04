@@ -19,12 +19,14 @@ const MainPage = () => {
   }, []);
   return (
     <div>
+      <p>IMMFLY</p>
+      <h2>Pokemon</h2>
+      <p>Generation: 1</p>
       {allPokemons && (
         <div>
-          <p>IMMFLY</p>
-          <h2>Pokemon</h2>
-          <p>Generation: 1</p>
           <p>{allPokemons.length} pokemon</p>
+          {/* Pass all the Pokemons for the API
+          as an array of objects */}
           <PokemonList pokemonList={allPokemons} />
         </div>
       )}

@@ -4,7 +4,7 @@ import {firstUpperCase} from "../utils/functions"
 import PropTypes from "prop-types";
 
 const PokemonCard = ({ pokemon }) => {
-  const { name} = pokemon;
+  const name = pokemon;
   return (
     <Link to={`/pokemon/${name}`}>
     <div>
@@ -19,7 +19,7 @@ const PokemonCard = ({ pokemon }) => {
 };
 
 PokemonCard.propTypes = {
-  pokemon: PropTypes.object,
+  pokemon: PropTypes.string,
 };
 
 export default PokemonCard;
