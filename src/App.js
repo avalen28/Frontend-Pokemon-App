@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from "react-router-dom";
-import MainPage from './components/MainPage.jsx'
-import PokemonDetail from './components/PokemonDetail.jsx';
+import MainPage from './views/MainPage.jsx'
+import PokemonDetail from "./views/PokemonDetail.jsx";
 import './App.css';
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/pokemon' element={<MainPage/>} />
+        <Route path='/pokemon/:name' element={<PokemonDetail/>}/>
         <Route path='*' element={<Navigate to="/pokemon" />} />
-        <Route path='/pokemon/:Id' element={<PokemonDetail/>}/>
       </Routes>
     </div>
   );

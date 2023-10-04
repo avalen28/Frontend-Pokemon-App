@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import PokemonCard from "./PokemonCard.jsx";
+import { Link } from "react-router-dom";
+import PokemonCard from "../components/PokemonCard.jsx";
 import axios from "axios";
 
 const MainPage = () => {
@@ -26,7 +27,9 @@ const MainPage = () => {
           <p>Generation: 1</p>
           <p>{allPokemons.length} pokemon</p>
           {allPokemons.map((pokemon, i) => (
-            <PokemonCard pokemon={pokemon} key={i} />
+            <Link to={`/pokemon/${pokemon.name}`} key={i}>
+              <PokemonCard pokemon={pokemon} />
+            </Link>
           ))}
         </div>
       )}
