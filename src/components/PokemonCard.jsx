@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-const PokemonCard = () => {
-    return (
-        <div>
-            <p>Hello, this is PokemonCard</p>
-        </div>
-    );
+const PokemonCard = ({ pokemon }) => {
+  const { name } = pokemon;
+  return (
+    <div>
+      <p>{name}</p>
+    </div>
+  );
 };
 
+PokemonCard.propTypes = {
+  pokemon: PropTypes.object,
+};
 export default PokemonCard;
