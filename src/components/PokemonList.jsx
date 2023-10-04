@@ -1,22 +1,19 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React from "react";
 import PokemonCard from "../components/PokemonCard.jsx";
 import PropTypes from "prop-types";
 
 const PokemonList = ({ pokemonList }) => {
-    return (
-      <>
-        {pokemonList.map((pokemon, i) => (
-          <Link to={`/pokemon/${pokemon.name}`} key={i}>
-            <PokemonCard pokemon={pokemon} />
-          </Link>
-        ))}
-      </>
-    );
+  return (
+    <>
+      {pokemonList.map((pokemon, i) => (
+        <PokemonCard pokemon={pokemon} key={i} />
+      ))}
+    </>
+  );
 };
 
 PokemonList.propTypes = {
-  pokemonList: PropTypes.object,
+  pokemonList: PropTypes.array,
 };
 
 export default PokemonList;
