@@ -1,70 +1,59 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Pokemon test
+Hello. This is the Immfly frontend code test. You have to build a web
+application listing the **first pokemon generation**.
+## Features to implement
+### Build and style the main list
+You have to implement the main list like in this image:
+<img align="center" src="https://imgur.com/HNu1wmq.png" style="border: 1px
+solid black" />
+Notice that:
+*  The url is **/pokemon**.
+*  When user hovers a pokemon, its background becomes gray.
+### Pokemon detail page
+Add the possibility to click on a pokemon and go to the detail page, like
+in this image:
+<img align="center" src="https://imgur.com/1Mbh6mK.png" style="border: 1px
+solid black" />
+Notice that the pokemon detail url is different. It is ``/pokemon/:name``.
+In the **charizard** example is ``/pokemon/charizard``.
+### Images
+The images url is
+``https://img.pokemondb.net/sprites/black-white/anim/normal/{name}.gif``
+For example:
+* **Charizard** <img align="center"
+src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.g
+if"/>
+* **Bulbasaur** <img align="center"
+src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.g
+if" />
+### Api Endpoints
+The api base url is ``https://pokeapi.co/api/v2``.
+* **List**: ``/pokemon`` (maybe you have to add the limit parameter on the
+request to fetch the first generation in only one request).
+* **Detail**: ``/pokemon/:name``.
+For example:
+* **Charizard**: ``https://pokeapi.co/api/v2/pokemon/charizard``
+* **Bulbasaur**: ``https://pokeapi.co/api/v2/pokemon/bulbasaur``
+## Demo
+You can watch/download the video showing how the app finally should work:
+<a
+href="https://mega.nz/file/2JNVlIzb#kmmubCQEUQV0RgZ9dExTC64P_9eDNBPE8zgNNS
+-b0do" target="_blank">demo</a>.
+## We want to see
+- React knowledge (**hooks** and last features). - Project architecture
+- Css skills
+- Javascript skills
+- Clean code and good practices
+## You should
+- **NOT USE** bootstrap or other css frameworks.
+- **Prevent unknown urls** while redirecting to the list page - Avoid using 3d party packages as much as you can
+- Pay attention to details
+- Responsiveness (mobile/tablet/desktop)
+- *The simple, the better*, avoid overengineering.
+## Bonus
+- Allow to select user's favourite pokemon and see them in a new page. Feel free to design it.
+- Add a filter to search pookemon by name
+- Use **styled-components**
+- Add **tests**
+- Use a **linter**
+- Custom **webpack** implementation instead of **create-react-app** or similar packages
