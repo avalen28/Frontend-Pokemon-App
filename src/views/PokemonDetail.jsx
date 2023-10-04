@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { firstUpperCase } from "../utils/functions";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -28,12 +29,14 @@ const PokemonDetail = () => {
             src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${name}.gif`}
             alt={`pokemon ${name}`}
           />
-          <p>{name.charAt(0).toUpperCase()+name.slice(1)}</p>
+          <p>{firstUpperCase(name)}</p>
           <p>ID: {pokemon.id}</p>
           <p>
             Type:
             {pokemon.types.map((elem) => (
-              <span key={`type ${elem.type.name}`}>{elem.type.name} </span>
+              <span key={`type ${elem.type.name}`}>
+                {firstUpperCase(elem.type.name)}{" "}
+              </span>
             ))}
           </p>
           <p>Height: {pokemon.height}</p>
@@ -42,7 +45,7 @@ const PokemonDetail = () => {
             <ul>
               {pokemon.abilities.map((elem) => (
                 <li key={`hability ${elem.ability.name}`}>
-                  {elem.ability.name}
+                  {firstUpperCase(elem.ability.name)}
                 </li>
               ))}
             </ul>

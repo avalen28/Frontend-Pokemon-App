@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import PokemonCard from "../components/PokemonCard.jsx";
 import axios from "axios";
+import PokemonList from "../components/PokemonList";
 
 const MainPage = () => {
   const [allPokemons, setAllPokemons] = useState(null);
@@ -26,11 +25,7 @@ const MainPage = () => {
           <h2>Pokemon</h2>
           <p>Generation: 1</p>
           <p>{allPokemons.length} pokemon</p>
-          {allPokemons.map((pokemon, i) => (
-            <Link to={`/pokemon/${pokemon.name}`} key={i}>
-              <PokemonCard pokemon={pokemon} />
-            </Link>
-          ))}
+          <PokemonList pokemonList={allPokemons} />
         </div>
       )}
     </div>
