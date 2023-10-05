@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import PokemonList from "../components/PokemonList";
 import SearchInput from "../components/SearchInput";
 
@@ -31,13 +32,15 @@ const MainPage = () => {
       <p>IMMFLY</p>
       <h2>Pokemon</h2>
       <p>Generation: 1</p>
+      <Link to={"/pokemon/favorites"}>Go to favorites</Link>
+
       <SearchInput isPokemonFirstGeneration={isPokemonFirstGeneration} />
       {pokemonsToShow && (
         <div>
           <p>{pokemonsToShow.length} pokemon</p>
           {/* Pass all the Pokemons for the API
           as an array of strings */}
-          <PokemonList pokemonList={pokemonsToShow} />
+          <PokemonList pokemonList={pokemonsToShow} showFavButton={true} />
         </div>
       )}
     </div>

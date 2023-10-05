@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { firstUpperCase } from "../utils/functions";
 import PropTypes from "prop-types";
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, showFavButton }) => {
   const name = pokemon;
 
   const addPokemonToFav = () => {
@@ -28,7 +28,7 @@ const PokemonCard = ({ pokemon }) => {
 
   return (
     <div>
-      <button onClick={addPokemonToFav}>Add to Fav</button>
+      {showFavButton && <button onClick={addPokemonToFav}>Add to Fav</button>}
       <br />
       <Link to={`/pokemon/${name}`}>
         <img
@@ -43,6 +43,7 @@ const PokemonCard = ({ pokemon }) => {
 
 PokemonCard.propTypes = {
   pokemon: PropTypes.string,
+  showFavButton: PropTypes.bool,
 };
 
 export default PokemonCard;
