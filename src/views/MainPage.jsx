@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonList from "../components/PokemonList";
+import SearchInput from "../components/SearchInput";
 
 const MainPage = () => {
-  const [allPokemons, setAllPokemons] = useState(null);
+  const [pokemonsToShow, setPokemonsToShow] = useState(null);
   const getPokemonsFromApi = async () => {
     try {
       const responseFromTheApi = await axios.get(
         "https://pokeapi.co/api/v2/pokemon/?limit=151"
       );
-      setAllPokemons(responseFromTheApi.data.results);
+      const pokemonForArr = responseFromTheApi.data.results;
+      const pokemonNamesInArr = pokemonForArr.map(pokemon => pokemon.name)
+      setPokemonsToShow(pokemonNamesInArr);
     } catch (error) {
       console.error("this is the error", error);
     }
@@ -22,12 +25,13 @@ const MainPage = () => {
       <p>IMMFLY</p>
       <h2>Pokemon</h2>
       <p>Generation: 1</p>
-      {allPokemons && (
+      <SearchInput />
+      {pokemonsToShow && (
         <div>
-          <p>{allPokemons.length} pokemon</p>
+          <p>{pokemonsToShow.length} pokemon</p>
           {/* Pass all the Pokemons for the API
           as an array of objects */}
-          <PokemonList pokemonList={allPokemons} />
+          <PokemonList pokemonList={pokemonsToShow} />
         </div>
       )}
     </div>
