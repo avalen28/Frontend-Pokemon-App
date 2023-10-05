@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 //The components takes an array of Pokemon with
 // his name and personal url (everything in an object)
 const PokemonList = ({ pokemonList }) => {
-  console.log(pokemonList)
   return (
     <>
 {/* This map take every pokemon (object) in the array

@@ -5,6 +5,7 @@ import SearchInput from "../components/SearchInput";
 
 const MainPage = () => {
   const [pokemonsToShow, setPokemonsToShow] = useState(null);
+
   const getPokemonsFromApi = async () => {
     try {
       const responseFromTheApi = await axios.get(
@@ -17,6 +18,11 @@ const MainPage = () => {
       console.error("this is the error", error);
     }
   };
+
+  const isPokemonFirstGeneration = (pokemonToCheck) => {
+  return pokemonsToShow.includes(pokemonToCheck)
+}
+
   useEffect(() => {
     getPokemonsFromApi();
   }, []);
@@ -25,7 +31,7 @@ const MainPage = () => {
       <p>IMMFLY</p>
       <h2>Pokemon</h2>
       <p>Generation: 1</p>
-      <SearchInput />
+      <SearchInput isPokemonFirstGeneration={isPokemonFirstGeneration} />
       {pokemonsToShow && (
         <div>
           <p>{pokemonsToShow.length} pokemon</p>
