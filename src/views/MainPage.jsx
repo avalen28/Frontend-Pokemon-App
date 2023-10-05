@@ -12,7 +12,7 @@ const MainPage = () => {
         "https://pokeapi.co/api/v2/pokemon/?limit=151"
       );
       const pokemonForArr = responseFromTheApi.data.results;
-      const pokemonNamesInArr = pokemonForArr.map(pokemon => pokemon.name)
+      const pokemonNamesInArr = pokemonForArr.map((pokemon) => pokemon.name);
       setPokemonsToShow(pokemonNamesInArr);
     } catch (error) {
       console.error("this is the error", error);
@@ -20,8 +20,8 @@ const MainPage = () => {
   };
 
   const isPokemonFirstGeneration = (pokemonToCheck) => {
-  return pokemonsToShow.includes(pokemonToCheck)
-}
+    return pokemonsToShow.includes(pokemonToCheck);
+  };
 
   useEffect(() => {
     getPokemonsFromApi();
@@ -36,7 +36,7 @@ const MainPage = () => {
         <div>
           <p>{pokemonsToShow.length} pokemon</p>
           {/* Pass all the Pokemons for the API
-          as an array of objects */}
+          as an array of strings */}
           <PokemonList pokemonList={pokemonsToShow} />
         </div>
       )}

@@ -5,9 +5,26 @@ import PropTypes from "prop-types";
 
 const PokemonCard = ({ pokemon }) => {
   const name = pokemon;
+
+  const addPokemonToFav = () => {
+    // this is what currently have on the local storage.
+    const currentPokemonsFav = localStorage.getItem("favPokemons");
+
+    let pokemonArr;
+
+    if (currentPokemonsFav === null) {
+      pokemonArr = [];
+    } else {
+      pokemonArr = currentPokemonsFav.split(",");
+    }
+    pokemonArr.push(name);
+
+    localStorage.setItem("favPokemons", pokemonArr);
+  };
+
   return (
     <div>
-      <button>Add to Fav</button>
+      <button onClick={addPokemonToFav}>Add to Fav</button>
       <br />
       <Link to={`/pokemon/${name}`}>
         <img
