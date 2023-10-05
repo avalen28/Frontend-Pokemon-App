@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import PokemonList from "../components/PokemonList";
 import SearchInput from "../components/SearchInput";
 
+
 const MainPage = () => {
   const [pokemonsToShow, setPokemonsToShow] = useState(null);
 
@@ -28,16 +29,20 @@ const MainPage = () => {
     getPokemonsFromApi();
   }, []);
   return (
-    <div>
-      <p>IMMFLY</p>
-      <h2>Pokemon</h2>
-      <p>Generation: 1</p>
+    <div className="center-block">
+      <img className="ifi-logo" src="../images/ifi-logo.png" alt="ifi logo" />
+      <img
+        className="pokemon-logo"
+        src="../images/pokemon-logo.png"
+        alt="pokemon logo"
+      />
       <Link to={"/pokemon/favorites"}>Go to favorites</Link>
 
       <SearchInput isPokemonFirstGeneration={isPokemonFirstGeneration} />
       {pokemonsToShow && (
-        <div>
-          <p>{pokemonsToShow.length} pokemon</p>
+        <div className="center-block container-pokemonList">
+          <h4 className="number-generation">Generation: 1</h4>
+          <h5>{pokemonsToShow.length} pokemon</h5>
           {/* Pass all the Pokemons for the API
           as an array of strings */}
           <PokemonList pokemonList={pokemonsToShow} showFavButton={true} />

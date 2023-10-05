@@ -8,7 +8,7 @@ import Favorites from './views/Favorites.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App center-block">
       <Toaster />
       <Routes>
         <Route path="/pokemon" element={<MainPage />} />
