@@ -17,8 +17,12 @@ const PokemonCard = ({ pokemon }) => {
     } else {
       pokemonArr = currentPokemonsFav.split(",");
     }
-    pokemonArr.push(name);
 
+    if (pokemonArr.includes(name)) {
+      pokemonArr = pokemonArr.filter((elem) => elem !== name);
+    } else {
+      pokemonArr.push(name);
+    }
     localStorage.setItem("favPokemons", pokemonArr);
   };
 
