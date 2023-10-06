@@ -46,18 +46,18 @@ const PokemonCard = ({ pokemon, showFavButton }) => {
     getFavPokemonsToChangeFavOption()
   }, []);
   return (
-    <div>
-      {showFavButton && isFavorite === false && (
-        <button onClick={addPokemonToFav}>Add to Fav</button>
+    <div className="pokemon-card centered-block">
+      {showFavButton && !isFavorite && (
+        <p className="fav-btn" onClick={addPokemonToFav}>☆</p>
       )}
-      <br />
-      {showFavButton && isFavorite === true && (
-        <button onClick={addPokemonToFav}>removes</button>
+      {showFavButton && isFavorite && (
+        <p className="fav-btn" onClick={addPokemonToFav}>★</p>
       )}
-      <Link to={`/pokemon/${name}`}>
+      <Link to={`/pokemon/${name}`} className="pokemon-info centered-block">
         <img
           src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${name}.gif`}
           alt={`pokemon ${name}`}
+          className="pokemon-gif"
         />
         <p>{firstUpperCase(name)}</p>
       </Link>

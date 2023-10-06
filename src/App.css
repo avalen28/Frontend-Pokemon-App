@@ -8,13 +8,13 @@
 a {
     text-decoration: none;
 }
-
-/* Main Page styles */
 .centered-block {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* Main Page styles */
 .ifi-logo{
     width: 40px;
     margin: 20px 0px;
@@ -46,4 +46,26 @@ a {
     border: 2px solid rgb(109, 108, 108);
     padding: 10px;
     border-radius: 100%;
+}
+
+/* Pokemon card styles */
+.pokemon-card {
+    border: 1.5px solid rgb(109, 108, 108);
+    width: 80%;
+    height: 130px;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+.fav-btn {
+    position: absolute;
+    right: 20px;
+    top:20px;
+}
+.pokemon-info {
+    height: 100%;
+    justify-content: space-around;
+}
+.pokemon-gif{
+    width: 60px;
 }
