@@ -9,8 +9,9 @@ const Favorites = () => {
 
   useEffect(() => {
     const currentPokemonsFav = localStorage.getItem("favPokemons");
-    if (currentPokemonsFav !== null) {
-      setFavPokemons(currentPokemonsFav.split(","));
+    if (currentPokemonsFav !== null && [currentPokemonsFav].filter(elem => elem !== "").length > 0) {
+      const pokemonStringToArr = currentPokemonsFav.split(",");
+      setFavPokemons(pokemonStringToArr.filter(pokemon => pokemon !== ""));
     }
   }, []);
   return (
@@ -19,6 +20,7 @@ const Favorites = () => {
       {favPokemons && (
         <PokemonList pokemonList={favPokemons} showFavButton={false} />
       )}
+      {favPokemons === null && <p>No pokemons added</p>}
     </div>
   );
 };
