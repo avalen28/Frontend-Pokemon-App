@@ -21,30 +21,40 @@ const PokemonDetail = () => {
     getPokemonFromApi();
   }, []);
   return (
-    <div>
+    <div className="pokemon-detail centered-block">
       {pokemon && (
-        <div>
+        <div className="pokemon-data centered-block">
           <button onClick={() => navigate(-1)}>X</button>
           <img
             src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${name}.gif`}
             alt={`pokemon ${name}`}
           />
-          <p>{firstUpperCase(name)}</p>
-          <p>ID: {pokemon.id}</p>
+          <h3 className="pokemon-name">{firstUpperCase(name)}</h3>
           <p>
-            Type:
+            <span className="data-title">ID:</span> {pokemon.id}
+          </p>
+          <p>
+            <span className="data-title">Type: </span>
             {pokemon.types.map((elem) => (
               <span key={`type ${elem.type.name}`}>
                 {firstUpperCase(elem.type.name)}{" "}
               </span>
             ))}
           </p>
-          <p>Height: {pokemon.height}</p>
+          <p>
+            <span className="data-title">Height: </span>
+            {pokemon.height}
+          </p>
+          <p>
+            <span className="data-title">Habilities</span>
+          </p>
           <div>
-            <p>Habilities</p>
             <ul>
               {pokemon.abilities.map((elem) => (
-                <li key={`hability ${elem.ability.name}`}>
+                <li
+                  className="list-items"
+                  key={`hability ${elem.ability.name}`}
+                >
                   {firstUpperCase(elem.ability.name)}
                 </li>
               ))}
