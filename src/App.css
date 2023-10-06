@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 * {
     color: rgb(109, 108, 108);
 }
@@ -58,6 +59,9 @@ a {
     border-radius: 5px;
     padding: 20px;
     position: relative;
+}
+.pokemon-card:hover{
+    box-shadow: 10px 5px 5px rgb(220, 220, 220);
 }
 .fav-btn {
     position: absolute;
@@ -127,13 +131,15 @@ a {
     background-color: unset;
     position: absolute;
     right: 20px;
-    top: 20px
+    top: 20px;
+    font-weight: bold;
+    font-size: 18px;
 }
 .pokemon-data img {
     width: 100px;
 }
 .data-title {
-    font-weight: bold;
+    font-weight: bolder;
 }
 .pokemon-name, .pokemon-data img {
     align-self: center;
