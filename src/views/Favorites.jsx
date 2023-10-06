@@ -9,18 +9,23 @@ const Favorites = () => {
 
   useEffect(() => {
     const currentPokemonsFav = localStorage.getItem("favPokemons");
-    if (currentPokemonsFav !== null && [currentPokemonsFav].filter(elem => elem !== "").length > 0) {
+    if (
+      currentPokemonsFav !== null &&
+      [currentPokemonsFav].filter((elem) => elem !== "").length > 0
+    ) {
       const pokemonStringToArr = currentPokemonsFav.split(",");
-      setFavPokemons(pokemonStringToArr.filter(pokemon => pokemon !== ""));
+      setFavPokemons(pokemonStringToArr.filter((pokemon) => pokemon !== ""));
     }
   }, []);
   return (
-    <div>
-      <button onClick={() => navigate(-1)}>Go back</button>
-      {favPokemons && (
-        <PokemonList pokemonList={favPokemons} showFavButton={false} />
-      )}
-      {favPokemons === null && <p>No pokemons added</p>}
+    <div className="centered-block favorites">
+      <button onClick={() => navigate(-1)} className="back-btn">←</button>
+      <div className="centered-block container-pokemonList">
+        {favPokemons && (
+          <PokemonList pokemonList={favPokemons} showFavButton={false} />
+        )}
+        {favPokemons === null && <p>No pokemons added</p>}
+      </div>
     </div>
   );
 };
