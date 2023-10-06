@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 // his name and personal url (everything in an object)
 const PokemonList = ({ pokemonList, showFavButton }) => {
   return (
-    <>
+    <div className="pokemon-list centered-block">
       {/* This map take every pokemon (object) in the array
 of pokemons and pass the name to the PokemonCard */}
       {pokemonList.map((pokemon, i) => (
         <PokemonCard pokemon={pokemon} showFavButton={showFavButton} key={i} />
       ))}
-    </>
+    </div>
   );
 };
 

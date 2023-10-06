@@ -51,6 +51,11 @@ a {
     border-radius: 100%;
 }
 
+/* Pokemon list */
+.pokemon-list {
+    width: 100%;
+}
+
 /* Pokemon card styles */
 .pokemon-card {
     border: 1.5px solid rgb(109, 108, 108);
