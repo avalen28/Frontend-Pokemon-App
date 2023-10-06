@@ -25,6 +25,7 @@ a {
 }
 .container-pokemonList{
     width: 80%;
+    gap: 15px;
 }
 .pokemon-generation, .pokemon-amount {
     text-align: center;
@@ -32,11 +33,11 @@ a {
 .pokemon-generation {
     font-size: 18px;
     font-weight: 600;
+    padding-bottom: 10px;
 }
 .pokemon-amount {
     font-size: 16px;
     font-weight: 300;
-    padding: 5px 0 20px;
 }
 .fav-link {
     font-size: 20px;

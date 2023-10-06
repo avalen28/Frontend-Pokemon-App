@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import PokemonList from "../components/PokemonList";
 import SearchInput from "../components/SearchInput";
 
-
 const MainPage = () => {
   const [pokemonsToShow, setPokemonsToShow] = useState(null);
 
@@ -29,8 +28,10 @@ const MainPage = () => {
     getPokemonsFromApi();
   }, []);
   return (
-    <div className="centered-block">
-      <Link to={"/pokemon/favorites"} className="fav-link">★</Link>
+    <div className="main-page centered-block">
+      <Link to={"/pokemon/favorites"} className="fav-link">
+        ★
+      </Link>
       <img className="ifi-logo" src="../images/ifi-logo.png" alt="ifi logo" />
       <img
         className="pokemon-logo"
@@ -39,9 +40,10 @@ const MainPage = () => {
       />
       {pokemonsToShow && (
         <div className="centered-block container-pokemonList">
-          <h4 className="pokemon-generation">Generation 1</h4>
-          <h5 className="pokemon-amount">{pokemonsToShow.length} pokemon</h5>
-
+          <div>
+            <h4 className="pokemon-generation">Generation 1</h4>
+            <h5 className="pokemon-amount">{pokemonsToShow.length} pokemon</h5>
+          </div>
           <SearchInput isPokemonFirstGeneration={isPokemonFirstGeneration} />
 
           {/* Pass all the Pokemons for the API
