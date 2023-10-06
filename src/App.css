@@ -3,11 +3,12 @@
 }
 .App {
     width: 100%; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 a {
     text-decoration: none;
 }
+
 /* Main Page styles */
 .centered-block {
     display: flex;
@@ -15,7 +16,6 @@ a {
     align-items: center;
 }
 .ifi-logo{
-    padding-top: 15px;
     width: 40px;
     margin: 20px 0px;
 }
@@ -31,8 +31,19 @@ a {
 }
 .pokemon-generation {
     font-size: 18px;
+    font-weight: 600;
 }
 .pokemon-amount {
-    font-size: 12px;
-    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 5px 0 20px;
+}
+.fav-link {
+    font-size: 20px;
+    position: absolute;
+    top:20px;
+    right: 30px;
+    border: 2px solid rgb(109, 108, 108);
+    padding: 10px;
+    border-radius: 100%;
 }

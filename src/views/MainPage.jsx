@@ -30,6 +30,7 @@ const MainPage = () => {
   }, []);
   return (
     <div className="centered-block">
+      <Link to={"/pokemon/favorites"} className="fav-link">★</Link>
       <img className="ifi-logo" src="../images/ifi-logo.png" alt="ifi logo" />
       <img
         className="pokemon-logo"
@@ -41,7 +42,6 @@ const MainPage = () => {
           <h4 className="pokemon-generation">Generation 1</h4>
           <h5 className="pokemon-amount">{pokemonsToShow.length} pokemon</h5>
 
-          <Link to={"/pokemon/favorites"}>Check your favorites</Link>
           <SearchInput isPokemonFirstGeneration={isPokemonFirstGeneration} />
 
           {/* Pass all the Pokemons for the API
