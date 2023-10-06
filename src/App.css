@@ -66,6 +66,26 @@ a {
     height: 100%;
     justify-content: space-around;
 }
-.pokemon-gif{
+.pokemon-gif {
     width: 60px;
+}
+
+/* Search input styles */
+.search-input {
+    background-color: rgb(220, 220, 220);
+    padding: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.input {
+    width: 90%;
+    border:none;
+    background-color: unset;
+}
+.magnifying-glass-logo{
+    width: 15px;
+    margin: auto;
 }

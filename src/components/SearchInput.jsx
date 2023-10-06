@@ -20,15 +20,21 @@ const SearchInput = ({ isPokemonFirstGeneration }) => {
     }
   };
   return (
-    <div>
+    <div className="search-input">
       <input
         type="text"
-        placeholder="Find your pokemon"
+        placeholder="Type the name of a Pokémon"
         value={pokemonToFind}
         onChange={handlePokemonInState}
         required
+        className="input"
       />
-      <button onClick={handleSearchPokemon}>Search!</button>
+      <img
+        src="../images/magnifying-glass.png"
+        alt="magnifying-glass"
+        onClick={handleSearchPokemon}
+        className="magnifying-glass-logo"
+      />
     </div>
   );
 };
