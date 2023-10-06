@@ -1,59 +1,84 @@
-# Pokemon test
-Hello. This is the Immfly frontend code test. You have to build a web
-application listing the **first pokemon generation**.
-## Features to implement
-### Build and style the main list
-You have to implement the main list like in this image:
-<img align="center" src="https://imgur.com/HNu1wmq.png" style="border: 1px
-solid black" />
-Notice that:
-*  The url is **/pokemon**.
-*  When user hovers a pokemon, its background becomes gray.
-### Pokemon detail page
-Add the possibility to click on a pokemon and go to the detail page, like
-in this image:
-<img align="center" src="https://imgur.com/1Mbh6mK.png" style="border: 1px
-solid black" />
-Notice that the pokemon detail url is different. It is ``/pokemon/:name``.
-In the **charizard** example is ``/pokemon/charizard``.
-### Images
-The images url is
-``https://img.pokemondb.net/sprites/black-white/anim/normal/{name}.gif``
-For example:
-* **Charizard** <img align="center"
-src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.g
-if"/>
-* **Bulbasaur** <img align="center"
-src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.g
-if" />
-### Api Endpoints
-The api base url is ``https://pokeapi.co/api/v2``.
-* **List**: ``/pokemon`` (maybe you have to add the limit parameter on the
-request to fetch the first generation in only one request).
-* **Detail**: ``/pokemon/:name``.
-For example:
-* **Charizard**: ``https://pokeapi.co/api/v2/pokemon/charizard``
-* **Bulbasaur**: ``https://pokeapi.co/api/v2/pokemon/bulbasaur``
-## Demo
-You can watch/download the video showing how the app finally should work:
-<a
-href="https://mega.nz/file/2JNVlIzb#kmmubCQEUQV0RgZ9dExTC64P_9eDNBPE8zgNNS
--b0do" target="_blank">demo</a>.
-## We want to see
-- React knowledge (**hooks** and last features). - Project architecture
-- Css skills
-- Javascript skills
-- Clean code and good practices
-## You should
-- **NOT USE** bootstrap or other css frameworks.
-- **Prevent unknown urls** while redirecting to the list page - Avoid using 3d party packages as much as you can
-- Pay attention to details
-- Responsiveness (mobile/tablet/desktop)
-- *The simple, the better*, avoid overengineering.
-## Bonus
-- Allow to select user's favourite pokemon and see them in a new page. Feel free to design it.
-- Add a filter to search pookemon by name
-- Use **styled-components**
-- Add **tests**
-- Use a **linter**
-- Custom **webpack** implementation instead of **create-react-app** or similar packages
+# Frontend-Pokemon-app 🐉🐉
+
+Welcome to the Frontend-Pokémon-app! This application allows users to search for Pokémon using the public PokeAPI. Users on this app can Users can browse, search, star, and view details about Pokémon from the first 151 (first generation).
+  (first generation) and pick one, or search manually for one Pokémon in particular by its name, and through a user-friendly interface, data about the Pokémon will be displayed. Users can also save their favorite Pokémons (and remove them) from their list of favorites and view the list of favorites.
+
+## Viewport recomendation 📱
+
+- The styles in this application have been designed for mobile first but it is fully responsive.
+
+## Features 📦
+
+- Users can scroll through a list of the first 151 Pokémons.
+- Users can easily add or remove Pokémons on this list to their favorites.
+- Users can see more details on each Pokémon by clicking on the list.
+- Users can use the search bar to look up a specific Pokémon (always from the first generation) by its name.
+- Users can view their selected favorite Pokémons. They can also click on them to see more details.
+
+**Data Display** 
+
+The app can display the following information about the Pokémon:
+- Image (gif)
+- Name
+- Pokémon ID
+- Type or Types
+- Height
+- Abilities
+
+
+## Technologies Used 💻
+
+- React
+- JavaScript
+- CSS
+- Postman (for API exploration)
+- Axios (for making API requests)
+- Jest
+- ESlint
+
+##### <em>Initial schematic representation of the app (pre-development):</em>
+
+![schematic planning](./public/images/escalidraw-idea.png)
+
+## How to Start 🏃‍♂️
+
+To run this application locally, follow these steps:
+
+1. Clone this repository.
+2. Navigate to the project directory: `cd frontend-pokemon-app`.
+3. Install the required dependencies: `npm install`.
+4. Start the application: `npm start`.
+5. Open your web browser and go to `http://localhost:3000` to view the app.
+
+To test this application, use the script `npm run test`
+
+## Views ##
+| View              | Route       | Description                             |
+|----------------------|----------------|-----------------------------------------|
+| MainPage     | /pokemon       | Get all first generation Pokemons (151) |
+| PokemonDetail | /pokemon/{name} | Get a specific Pokemon                  |
+| Favorites     | /pokemon/favorites    | Get all favorite Pokemons (user's choice) |
+
+## Notes 📝
+
+- The main view ('/pokemon') makes an API call every time it renders. This decision was made because it's a quick and lightweight call, so it was simpler from a code perspective to make this call each time rather than making it once and storing it in local storage.
+
+- I've chosen to create a utils folder to store methods that are repeated throughout the app, or that deal with logic that is not component-specific, aiming to keep the code organized.
+
+- Since the aim of the project didn't include the creation of a database to store user favorite Pokémons, I've decided to store this information in the browser's local storage.
+
+- About styles, I've made every effort to closely adhere to the provided requirements and replicate them faithfully.
+
+- I've focused on creating components with reusability in mind.
+
+## Improvements that could be made to the app 🚀
+
+- Work on using WebPack (Work in Progress)
+- Refactor the API calls. Create a pokémonService class that handles all the logic regarding the PokéApi, with various methods for each endpoint call, to remove such logic from the components.
+- Adding a dynamic search feature that suggests matches as a name is entered into the search bar.
+- Enhancing the user experience by improving the interface to include a "Pokémon Not Found" component style.
+- Add more unit testing to achieve a higher code coverage.
+
+It has really been a happy coding time! 💻
+
+<img src="https://media.tenor.com/IwXjLDzTE5sAAAAC/pokemon-ash.gif" width="350" height="300" alt="throw pokeball">

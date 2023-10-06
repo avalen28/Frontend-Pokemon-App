@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { firstUpperCase } from "../utils/functions";
+import { firstUpperCase, conversionHeight } from "../utils/functions";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -43,7 +43,7 @@ const PokemonDetail = () => {
           </p>
           <p>
             <span className="data-title">Height: </span>
-            {pokemon.height}
+            {conversionHeight(pokemon.height)}
           </p>
           <div>
             <p className="abilities">
