@@ -47,7 +47,7 @@ const PokemonDetail = () => {
           </p>
           <div>
             <p className="abilities">
-              <span className="data-title">Habilities</span>
+              <span className="data-title">Abilities</span>
             </p>
             <ul>
               {pokemon.abilities.map((elem) => (
