@@ -81,6 +81,7 @@ a {
     position: absolute;
     right: 20px;
     top:20px;
+    cursor: pointer;
 }
 .pokemon-info {
     height: 100%;
@@ -119,6 +120,7 @@ a {
 .magnifying-glass-logo{
     width: 15px;
     margin: auto;
+    cursor: pointer;
 }
 
 /* Favorites */
@@ -169,4 +171,7 @@ a {
 }
 .list-items {
     margin-left: 40px;
+}
+.abilities {
+    padding-bottom: 12px;
 }
