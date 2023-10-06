@@ -29,20 +29,21 @@ const MainPage = () => {
     getPokemonsFromApi();
   }, []);
   return (
-    <div className="center-block">
+    <div className="centered-block">
       <img className="ifi-logo" src="../images/ifi-logo.png" alt="ifi logo" />
       <img
         className="pokemon-logo"
         src="../images/pokemon-logo.png"
         alt="pokemon logo"
       />
-      <Link to={"/pokemon/favorites"}>Go to favorites</Link>
-
-      <SearchInput isPokemonFirstGeneration={isPokemonFirstGeneration} />
       {pokemonsToShow && (
-        <div className="center-block container-pokemonList">
-          <h4 className="number-generation">Generation: 1</h4>
-          <h5>{pokemonsToShow.length} pokemon</h5>
+        <div className="centered-block container-pokemonList">
+          <h4 className="pokemon-generation">Generation 1</h4>
+          <h5 className="pokemon-amount">{pokemonsToShow.length} pokemon</h5>
+
+          <Link to={"/pokemon/favorites"}>Check your favorites</Link>
+          <SearchInput isPokemonFirstGeneration={isPokemonFirstGeneration} />
+
           {/* Pass all the Pokemons for the API
           as an array of strings */}
           <PokemonList pokemonList={pokemonsToShow} showFavButton={true} />
