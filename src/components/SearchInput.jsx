@@ -30,7 +30,7 @@ const SearchInput = ({ isPokemonFirstGeneration }) => {
         className="input"
       />
       <img
-        src="../images/magnifying-glass.png"
+        src="https://assets.stickpng.com/images/59cfc4d2d3b1936210a5ddc7.png"
         alt="magnifying-glass"
         onClick={handleSearchPokemon}
         className="magnifying-glass-logo"

@@ -32,10 +32,14 @@ const MainPage = () => {
       <Link to={"/pokemon/favorites"} className="fav-link">
         ★
       </Link>
-      <img className="ifi-logo" src="../images/ifi-logo.png" alt="ifi logo" />
+      <img
+        className="ifi-logo"
+        src="https://startupxplore.com/uploads/ff808081535af45e01535ff2101a01c9-large.png"
+        alt="ifi logo"
+      />
       <img
         className="pokemon-logo"
-        src="../images/pokemon-logo.png"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
         alt="pokemon logo"
       />
       {pokemonsToShow && (
