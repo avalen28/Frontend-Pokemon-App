@@ -1,177 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
+:root {
+  --light-yellow: #faebd7c4;
+}
 * {
-    color: rgb(109, 108, 108);
+  color: rgb(109, 108, 108);
 }
 .App {
-    width: 100%; 
-    font-family: 'Roboto', sans-serif;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .centered-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Main Page styles */
-.ifi-logo{
-    width: 40px;
-    margin: 20px 0px;
+.main-page {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3a390145-1e80-4c9f-bea4-6f11959496cd/del304o-a42b2fab-d054-4ae3-be0b-dcb50b429172.jpg/v1/fill/w_1280,h_720,q_75,strp/pokeball_wallpaper_by_blackholekun_del304o-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvM2EzOTAxNDUtMWU4MC00YzlmLWJlYTQtNmYxMTk1OTQ5NmNkXC9kZWwzMDRvLWE0MmIyZmFiLWQwNTQtNGFlMy1iZTBiLWRjYjUwYjQyOTE3Mi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.uUBZCvo3rUs5zwjD83BHcfVX8H_E70EkJqrgIRqBCaw);
+  background-size: contain;
 }
-.pokemon-logo{
-    width: 350px;
-    padding-bottom: 40px;
+.ifi-logo {
+  width: 40px;
+  margin: 20px 0px;
 }
-.container-pokemonList{
-    width: 80%;
-    gap: 15px;
+.pokemon-logo {
+  width: 350px;
+  padding-bottom: 40px;
 }
-.pokemon-generation, .pokemon-amount {
-    text-align: center;
+.container-pokemonList {
+  width: 80%;
+  gap: 15px;
+}
+.subtitle {
+  background-color: var(--light-yellow);
+  padding: 15px 30px;
+  border: 1px solid antiquewhite;
+  border-radius: 5px;
+}
+.pokemon-generation,
+.pokemon-amount {
+  text-align: center;
+  color: #3b3b3b;
 }
 .pokemon-generation {
-    font-size: 18px;
-    font-weight: 600;
-    padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 10px;
 }
 .pokemon-amount {
-    font-size: 16px;
-    font-weight: 300;
+  font-size: 16px;
+  font-weight: 300;
 }
 .fav-link {
-    font-size: 20px;
-    position: absolute;
-    top:20px;
-    right: 30px;
-    border: 2px solid rgb(109, 108, 108);
-    padding: 10px;
-    border-radius: 100%;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: 2px solid rgb(109, 108, 108);
+  padding: 10px;
+  border-radius: 100%;
+  background-color: var(--light-yellow);
 }
 
 /* Pokemon list */
 .pokemon-list {
-    width: 100%;
-    gap: 15px;
+  width: 100%;
+  gap: 15px;
 }
 @media only screen and (min-width: 600px) {
-    .pokemon-list{
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: space-around;
-    }
+  .pokemon-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+  }
 }
 
 /* Pokemon card styles */
 .pokemon-card {
-    border: 1.5px solid rgb(109, 108, 108);
-    width: 80%;
-    height: 130px;
-    border-radius: 5px;
-    padding: 20px;
-    position: relative;
+  border: 1.5px solid rgb(109, 108, 108);
+  background-color: var(--light-yellow);
+  width: 80%;
+  height: 130px;
+  border-radius: 0px 15px;
+  padding: 20px;
+  position: relative;
 }
-.pokemon-card:hover{
-    background-color: rgb(220, 220, 220);
+.pokemon-card:hover {
+  background-color: #faebd7;
 }
 .fav-btn {
-    position: absolute;
-    right: 20px;
-    top:20px;
-    cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
 }
 .pokemon-info {
-    height: 100%;
-    justify-content: space-around;
+  height: 100%;
+  justify-content: space-around;
 }
 .pokemon-gif {
-    width: 60px;
+  width: 60px;
 }
 
 @media only screen and (min-width: 600px) {
-    .pokemon-card {
-        width: 37%;
-    }
+  .pokemon-card {
+    width: 37%;
+  }
 }
 @media only screen and (min-width: 768px) {
-    .pokemon-card {
-        width: 23%;
-    }
+  .pokemon-card {
+    width: 23%;
+  }
 }
 
 /* Search input styles */
 .search-input {
-    background-color: rgb(220, 220, 220);
-    padding: 5px;
-    border: 1px solid rgb(220, 220, 220);
-    border-radius: 5px;
-    width: 90%;
-    display: flex;
-    align-items: center;
+  background-color: var(--light-yellow);
+  padding: 5px;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+  width: 90%;
+  display: flex;
+  align-items: center;
 }
 .input {
-    width: 90%;
-    border:none;
-    background-color: unset;
+  width: 90%;
+  border: none;
+  background-color: unset;
 }
-.magnifying-glass-logo{
-    width: 15px;
-    margin: auto;
-    cursor: pointer;
+.magnifying-glass-logo {
+  width: 15px;
+  margin: auto;
+  cursor: pointer;
 }
 
 /* Favorites */
 .favorites {
-    padding-top: 20px;
+  padding-top: 20px;
+  height: 100vh;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3a390145-1e80-4c9f-bea4-6f11959496cd/del304o-a42b2fab-d054-4ae3-be0b-dcb50b429172.jpg/v1/fill/w_1280,h_720,q_75,strp/pokeball_wallpaper_by_blackholekun_del304o-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvM2EzOTAxNDUtMWU4MC00YzlmLWJlYTQtNmYxMTk1OTQ5NmNkXC9kZWwzMDRvLWE0MmIyZmFiLWQwNTQtNGFlMy1iZTBiLWRjYjUwYjQyOTE3Mi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.uUBZCvo3rUs5zwjD83BHcfVX8H_E70EkJqrgIRqBCaw);
+  background-size: contain;
 }
 .back-btn {
-    border: none;
-    font-size: 20px;
-    margin-bottom: 10px;
-    align-self: flex-start;
-    margin-left: 12vw;
-    border: 2px solid rgb(109, 108, 108);
-    padding: 10px;
-    border-radius: 100%;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  margin-left: 12vw;
+  border: 2px solid rgb(109, 108, 108);
+  padding: 10px;
+  border-radius: 100%;
+  background-color: var(--light-yellow);
 }
 
 /* Pokemon detail */
 .pokemon-detail {
-    margin-top: 20px;
+  padding-top: 20px;
+  height: 100vh;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3a390145-1e80-4c9f-bea4-6f11959496cd/del304o-a42b2fab-d054-4ae3-be0b-dcb50b429172.jpg/v1/fill/w_1280,h_720,q_75,strp/pokeball_wallpaper_by_blackholekun_del304o-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvM2EzOTAxNDUtMWU4MC00YzlmLWJlYTQtNmYxMTk1OTQ5NmNkXC9kZWwzMDRvLWE0MmIyZmFiLWQwNTQtNGFlMy1iZTBiLWRjYjUwYjQyOTE3Mi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.uUBZCvo3rUs5zwjD83BHcfVX8H_E70EkJqrgIRqBCaw);
+  background-size: contain;
 }
 .pokemon-data {
-    width: 300px;
-    border:1px solid rgb(109, 108, 108);
-    height: 550px;
-    position: relative;
-    padding: 20px;
-    justify-content: space-around;
-    align-items: unset;
+  width: 300px;
+  background-color: var(--light-yellow);
+  border: 1px solid rgb(109, 108, 108);
+  border-radius: 0px 15px;
+  height: 550px;
+  position: relative;
+  padding: 20px;
+  justify-content: space-around;
+  align-items: unset;
 }
 .pokemon-data button {
-    border: none;
-    background-color: unset;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-weight: bold;
-    font-size: 18px;
+  border: none;
+  background-color: unset;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.pokemon-data h3,
+p,
+span {
+  color: black;
 }
 .pokemon-data img {
-    width: 100px;
+  width: 100px;
 }
 .data-title {
-    font-weight: bolder;
+  font-weight: bolder;
 }
-.pokemon-name, .pokemon-data img {
-    align-self: center;
+.pokemon-name,
+.pokemon-data img {
+  align-self: center;
 }
 .list-items {
-    margin-left: 40px;
+  margin-left: 40px;
+  color: black;
 }
 .abilities {
-    padding-bottom: 12px;
+  padding-bottom: 12px;
+  color: black;
 }
