@@ -24,7 +24,7 @@ const Favorites = () => {
         {favPokemons && (
           <PokemonList pokemonList={favPokemons} showFavButton={false} />
         )}
-        {favPokemons === null && <p>No pokemons added</p>}
+        {favPokemons === null && <p className="no-pokemon">No pokemons added</p>}
       </div>
     </div>
   );
