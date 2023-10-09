@@ -44,7 +44,7 @@ const MainPage = () => {
       />
       {pokemonsToShow && (
         <div className="centered-block container-pokemonList">
-          <div>
+          <div className="subtitle">
             <h4 className="pokemon-generation">Generation 1</h4>
             <h5 className="pokemon-amount">{pokemonsToShow.length} pokemon</h5>
           </div>
