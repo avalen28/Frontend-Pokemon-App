@@ -157,6 +157,7 @@ a {
   padding: 10px;
   border-radius: 100%;
   background-color: var(--light-yellow);
+  cursor: pointer;
 }
 
 /* Pokemon detail */
@@ -185,6 +186,7 @@ a {
   top: 20px;
   font-weight: bold;
   font-size: 18px;
+  cursor: pointer;
 }
 .pokemon-data h3,
 p,
